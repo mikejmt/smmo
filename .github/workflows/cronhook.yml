@@ -1,15 +1,12 @@
-name: Trigger Bash Script
+name: cronhook
 
 on:
-  repository_dispatch:
-    types: [trigger-bash-script]
+  workflow_dispatch:
 
 jobs:
-  run-bash-script:
+  run_script:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Run bash script
-        run: |
-          bash /path/to/your/bash/script.sh
+    - uses: actions/checkout@v2
+    - name: Execute Bash Script
+      run: bash .github/script.sh
