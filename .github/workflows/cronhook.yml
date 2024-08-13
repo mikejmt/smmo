@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Execute Bash Script
-      run: bash .github/script.sh
+      run: bash /script.sh
